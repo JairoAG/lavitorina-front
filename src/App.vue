@@ -80,12 +80,13 @@ export default {
       this.currentDateTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
     },
     register() {
-      if (!this.children || !this.adults || !this.tourTime || !this.tramName || !this.tourType || !this.total) {
-        alert('Todos los campos deben ser llenados.');
+      if (!this.adults || !this.tramName || !this.tourType || !this.tourTime || !this.total) {
+        alert('Necesitas llenar todos los campos necesarios.');
         return;
       }
       // Aquí puedes añadir la lógica para registrar los datos
       alert('Datos registrados exitosamente.');
+      this.clearForm(); // Reinicia el formulario
     },
     clearForm() {
       this.children = 0;
